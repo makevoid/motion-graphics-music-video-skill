@@ -29,6 +29,8 @@ Six examples made with this skill. Click a thumbnail to watch on YouTube.
 | <a href="https://youtu.be/s8PmK6zD5RY"><img src="docs/examples/upping-my-p-doom-remix-2.jpg" width="240" height="135" alt="Upping my P(doom) — Video Remix #2 — Opus 5.5 (et al.)"></a> | <a href="https://youtu.be/UGX2KzetGZ0"><img src="docs/examples/symphony.jpg" width="240" height="135" alt="Symphony — Elrosea — Opus 5.5 Music Video Motion Graphics Claude Plugin — SunoAI"></a> | <a href="https://youtu.be/Zqd77QCaa58"><img src="docs/examples/parterre-girl.jpg" width="240" height="135" alt="Opus 5.5 Animated Video - Parterre Girl by Core Refusal - Suno"></a> |
 | Remix of donaldjewkes's video remix · 2:22 | Elrosea · Opus 5.5 · SunoAI | Core Refusal · Opus 5.5 · Suno |
 
+If you are looking for the motion graphics -no-image- version (No Image / Video Models) please see: https://github.com/makevoid/motion-graphics-music-video-skill-noimage 
+
 <br>
 
 ## Quick start
