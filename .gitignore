@@ -14,3 +14,25 @@ work/
 **/prompts/e2e-*/
 **/prompts/live-vfx-*/
 .claude/skills/motion-graphics-music-video/scripts/tools/p5/fonts/
+
+# Keep the plugin source-only; generate media in a separate video project.
+*.[pP][nN][gG]
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[gG][iI][fF]
+*.[wW][eE][bB][pP]
+*.[aA][vV][iI][fF]
+*.[iI][cC][oO]
+*.[mM][pP]3
+*.[wW][aA][vV]
+*.[mM]4[aA]
+*.[aA][aA][cC]
+*.[fF][lL][aA][cC]
+*.[oO][gG][gG]
+*.[mM][pP]4
+*.[mM][oO][vV]
+*.[wW][eE][bB][mM]
+*.[tT][tT][fF]
+*.[oO][tT][fF]
+*.[wW][oO][fF][fF]
+*.[wW][oO][fF][fF]2

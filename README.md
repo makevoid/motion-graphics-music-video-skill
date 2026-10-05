@@ -1,6 +1,6 @@
 # Motion graphics music video plugin
 
-<a href=".claude-plugin/icon.png"><img src=".claude-plugin/icon.png" width="128" height="128" alt="Orange glass chat bubble with a timeline play button and music note"></a>
+<a href=".claude-plugin/icon.svg"><img src=".claude-plugin/icon.svg" width="128" height="128" alt="Orange glass chat bubble with a timeline play button and music note"></a>
 
 A Claude Code plugin for creating high quality motion graphics videos from just a music track and a prompt - This skill is made to be used with  Opus 5.5
 
@@ -18,16 +18,18 @@ The MP4 HD video file will be generated in the `ouput` directory at the end of t
 
 ## Videos created with this skill
 
-Six examples made with this skill. Click a thumbnail to watch on YouTube.
+Six examples made with this skill. Follow a title to watch on YouTube.
 
-| The Math of You | You knew how to fork — take 2 | You knew how to fork |
-| :---: | :---: | :---: |
-| <a href="https://youtu.be/TKXSOnVtfWQ"><img src="docs/examples/the-math-of-you.jpg" width="240" height="135" alt="The Math of You — HN - Suno"></a> | <a href="https://youtu.be/b70F1bWZlwE"><img src="docs/examples/you-knew-how-to-fork-take-2.jpg" width="240" height="135" alt="You knew how to fork — take 2, made with the Claude skill"></a> | <a href="https://youtu.be/Nxhg23_fheY"><img src="docs/examples/you-knew-how-to-fork.jpg" width="240" height="135" alt="You knew how to fork — @joshcirre"></a> |
-| HN - Suno · 3:25 | @joshcirre · 1:26 | @joshcirre · 1:26 |
-| <br> | <br>  | <br>  |
-| **Upping my P(doom) — remix #2** | **Symphony** | **Parterre Girl** |
-| <a href="https://youtu.be/s8PmK6zD5RY"><img src="docs/examples/upping-my-p-doom-remix-2.jpg" width="240" height="135" alt="Upping my P(doom) — Video Remix #2 — Opus 5.5 (et al.)"></a> | <a href="https://youtu.be/UGX2KzetGZ0"><img src="docs/examples/symphony.jpg" width="240" height="135" alt="Symphony — Elrosea — Opus 5.5 Music Video Motion Graphics Claude Plugin — SunoAI"></a> | <a href="https://youtu.be/Zqd77QCaa58"><img src="docs/examples/parterre-girl.jpg" width="240" height="135" alt="Opus 5.5 Animated Video - Parterre Girl by Core Refusal - Suno"></a> |
-| Remix of donaldjewkes's video remix · 2:22 | Elrosea · Opus 5.5 · SunoAI | Core Refusal · Opus 5.5 · Suno |
+| Video | Credits | Duration |
+| --- | --- | --- |
+| [The Math of You](https://youtu.be/TKXSOnVtfWQ) | HN - Suno | 3:25 |
+| [You knew how to fork — take 2](https://youtu.be/b70F1bWZlwE) | @joshcirre | 1:26 |
+| [You knew how to fork](https://youtu.be/Nxhg23_fheY) | @joshcirre | 1:26 |
+| [Upping my P(doom) — remix #2](https://youtu.be/s8PmK6zD5RY) | Remix of donaldjewkes's video remix | 2:22 |
+| [Symphony](https://youtu.be/UGX2KzetGZ0) | Elrosea · Opus 5.5 · SunoAI | — |
+| [Parterre Girl](https://youtu.be/Zqd77QCaa58) | Core Refusal · Opus 5.5 · Suno | — |
+
+The repository ships readable source files, including a small SVG icon, with no bundled binary media or fonts. The [icon recreation prompt](docs/icon-generation.md) and [production prompts](.claude/skills/motion-graphics-music-video/references/prompts.md) describe how to create assets in a separate video project. Plugin installation and MCP startup do not download assets or dependencies; project `setup` installs the production dependencies when explicitly run.
 
 If you are looking for the motion graphics -no-image- version (No Image / Video Models) please see: https://github.com/makevoid/motion-graphics-music-video-skill-noimage 
 

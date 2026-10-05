@@ -1,6 +1,6 @@
 {
   "name": "motion-graphics-music-video",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "license": "MIT",
   "description": "Create animated music videos with researched storyboards, Fal generation, p5 motion graphics, audio editing, and Swift VFX.",
   "author": {
