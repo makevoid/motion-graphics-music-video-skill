@@ -29,7 +29,7 @@ def frames(source, start, count):
                           "-of", "csv=p=0", source], capture_output=True, check=True, text=True).stdout
     w, h = map(int, out.strip().split(",")[:2])
     vf = f"select=gte(n\\,{start})" + (f"*lt(n\\,{start + count})" if count else "")
-    proc = subprocess.Popen(["ffmpeg", "-v", "error", "-i", source, "-vf", vf, "-vsync", "0", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
+    proc = subprocess.Popen(["ffmpeg", "-v", "error", "-i", source, "-vf", vf, "-fps_mode", "passthrough", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
                             stdout=subprocess.PIPE)
     size = w * h * 3
     while (buf := proc.stdout.read(size)) and len(buf) == size:

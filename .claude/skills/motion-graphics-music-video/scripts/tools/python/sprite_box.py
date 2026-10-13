@@ -16,7 +16,7 @@ if src.endswith((".png", ".jpg")):
 else:
     w, h = map(int, subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
                                     "-of", "csv=p=0", src], capture_output=True, text=True).stdout.split(",")[:2])
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", src, "-vf", "select=not(mod(n\\,6))", "-vsync", "0", "-f", "rawvideo",
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", src, "-vf", "select=not(mod(n\\,6))", "-fps_mode", "passthrough", "-f", "rawvideo",
                           "-pix_fmt", "rgb24", "-"], capture_output=True).stdout
     frames = list(np.frombuffer(raw, np.uint8).reshape(-1, h, w, 3).astype(int))
 boxes = []
