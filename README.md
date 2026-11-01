@@ -30,7 +30,7 @@ Seven examples made with this skill. Click a thumbnail to watch on YouTube.
 | Remix of donaldjewkes's video remix · 2:22 | Elrosea · Opus 5.5 · SunoAI | Core Refusal · Opus 5.5 · Suno |
 | <br> | <br>  | <br>  |
 | **Programming is DEAD** |  |  |
-| <a href="https://youtu.be/8b-NPujP_sw"><img src="https://github.com/user-attachments/assets/a975fde9-73b4-4448-bc44-84940652953e" width="240" height="135" alt="Programming is DEAD — Music Video — @makevoid"></a> |  |  |
+| <a href="https://youtu.be/MLxQCXH5-5o"><img src="https://i.ytimg.com/vi/MLxQCXH5-5o/mqdefault.jpg" width="240" height="135" alt="Programming Is Dead (AI Music Video made by Claude Opus)"></a> |  |  |
 | @makevoid · 1:56 |  |  |
 
 The repository ships readable source files, including a small SVG icon, with no bundled binary media or fonts. The [icon recreation prompt](docs/icon-generation.md) and [production prompts](.claude/skills/motion-graphics-music-video/references/prompts.md) describe how to create assets in a separate video project. Plugin installation and MCP startup do not download assets or dependencies; project `setup` installs the production dependencies when explicitly run.
