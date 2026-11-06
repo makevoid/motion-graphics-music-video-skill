@@ -1,9 +1,9 @@
 module Pipeline
   module Steps
     # Step 1 — the singer reference frame (text-to-image, prompt = prompts/<run>/01_ref_base.*).
-    # nano-banana-2 unless the generation sets image_model: (e.g. run3 uses gpt-image-2.5).
+    # GPT Image 2.6 Sunburst unless the generation explicitly sets image_model:.
     class RefBase < Step
-      MODEL = Fal::Models::GptImage25
+      MODEL = Fal::Models::GptImage26
 
       def submit
         if (source = project.generation[:edit_from])
@@ -37,7 +37,7 @@ module Pipeline
 
       protected
 
-      def model = project.generation[:edit_from] ? Fal::Models::GptImage25Edit : project.generation.fetch(:image_model, MODEL)
+      def model = project.generation[:edit_from] ? Fal::Models::GptImage26Edit : project.generation.fetch(:image_model, MODEL)
       def endpoint = model.endpoint
     end
   end

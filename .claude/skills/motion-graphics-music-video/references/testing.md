@@ -33,7 +33,7 @@ Live tests are excluded from routine runs. They require an explicit opt-in plus 
 LIVE_FAL=1 LIVE_SONG=/absolute/short-song.wav LIVE_LYRICS='known sung words' PROFILE=live ruby scripts/mv.rb test
 ```
 
-Supply `FAL_AI_API_KEY` via the environment for this explicit developer CLI test. The plugin's sensitive key is scoped to its MCP server, which does not expose the live test runner. Budget per run: one Sunburst xhigh generation, one Sunburst xhigh edit, one five-second H3 768P clip (a harness-only saving; real projects keep the 1080P default), one Whisper transcription, one Demucs separation and one SFX generation. Local composition/VFX adds no model charges. No automatic paid rerolls. Run only after accepting those costs. Output is retained for inspection. A provider failure ends the test with request evidence; resume/recover before paying again.
+Supply `FAL_AI_API_KEY` via the environment for this explicit developer CLI test. The plugin's sensitive key is scoped to its MCP server, which does not expose the live test runner. Budget per run: one Sunburst high quality / high reasoning generation, one Sunburst high quality / high reasoning edit, one five-second H3 768P clip (a harness-only saving; real projects keep the 1080P default), one Whisper transcription, one Demucs separation and one SFX generation. Local composition/VFX adds no model charges. No automatic paid rerolls. Run only after accepting those costs. Output is retained for inspection. A provider failure ends the test with request evidence; resume/recover before paying again.
 
 ## Behavioral rehearsal for the Markdown workflow
 

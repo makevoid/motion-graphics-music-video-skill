@@ -149,9 +149,9 @@ RSpec.describe "Fal HTTP and model contracts", :core do
       Excon.stub({method: :get, path: "/status"}, {status: 200, body: '{"status":"COMPLETED"}'})
       Excon.stub({method: :get, path: "/result"}, {status: 200, body: '{"images":[{"url":"https://cdn.test/image.png"}]}'})
       client = Fal::Client.new(api_key: "test-only", poll_interval: 0)
-      2.times { expect(Fal::Models::GptImage25.new(client: client).generate(prompt: "fixture").request_id).to eq("job-1") }
+      2.times { expect(Fal::Models::GptImage26.new(client: client).generate(prompt: "fixture").request_id).to eq("job-1") }
       expect(submitted.size).to eq(1)
-      expect(submitted.first).to include("quality" => "xhigh", "output_format" => "png")
+      expect(submitted.first).to include("quality" => "high", "reasoning_effort" => "high", "output_format" => "png")
       expect(Dir["output/requests/*.json"].size).to eq(1)
     end
   end

@@ -1,13 +1,13 @@
 module Pipeline
   module Steps
     # Step 2b — new framings of the reference character (extreme close-up, reframed, other gaze...) for the Shots step:
-    # prompts/<run>/02_keyframes.yml { name => edit prompt }, each sent with the ref_base image to gpt-image-2.5/edit.
+    # prompts/<run>/02_keyframes.yml { name => edit prompt }, each sent with the ref_base image to gpt-image-2.6/edit.
     # A spec can also be { "prompt" => ..., "refs" => [run, ...] } to add other runs' ref_base images (a second character):
     # image_urls = [this run's ref_base, *those], so the prompt can say "the character in the second image".
     # "base" => <keyframe name> edits an earlier keyframe of this list instead of ref_base (same framing, new pose),
     # "base" => false sends only the refs (a keyframe without the singer), "base" => "<run>/<keyframe>" edits another run's keyframe.
     class Keyframes < ItemsStep
-      MODEL = Fal::Models::GptImage25Edit
+      MODEL = Fal::Models::GptImage26Edit
 
       def specs = yaml("02_keyframes")
 

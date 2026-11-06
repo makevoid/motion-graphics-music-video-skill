@@ -24,15 +24,15 @@ Write one style paragraph in the plan and paste it verbatim into every image pro
 
 Define shared colour constants in p5 for specified palette anchors and accents. Match graphics, typography and light cues to the approved colour treatment, including any planned gradients, shading or scene-specific lighting. Keep characters, plates and graphics visually coherent. Select fonts, weights, text effects and textures for the brief. Before rendering, scan installed macOS fonts and copy the selected files into the video workspace as described in [Project fonts](animation-audio-vfx.md#project-fonts); the plugin bundles no fonts. Character cutouts describe the compositing method, not a paper-cutout appearance.
 
-## Identity sheets: GPT Image 2.5 Sunburst xhigh
+## Identity sheets: GPT Image 2.6 Sunburst high quality / high reasoning
 
-Default class `Fal::Models::GptImage25`, endpoint `openai/gpt-image-2.5/sunburst/text-to-image`. Write `prompts/char-<id>-v1/01_ref_base.txt` with the actual prompt. Request one coherent character sheet: front full body, profile/back if useful, and distinct expressions; specify proportions, silhouette, hair, clothing, face and color anchors. Keep sufficient limb margins. Ban lettering, captions and watermarks; p5 draws final typography.
+Default class `Fal::Models::GptImage26`, endpoint `openai/gpt-image-2.6/sunburst/text-to-image`. Write `prompts/char-<id>-v1/01_ref_base.txt` with the actual prompt. Request one coherent character sheet: front full body, profile/back if useful, and distinct expressions; specify proportions, silhouette, hair, clothing, face and color anchors. Keep sufficient limb margins. Ban lettering, captions and watermarks; p5 draws final typography.
 
 Inspect the face and hands, anatomy, silhouette and expression range. Accept a reference only after visual review. New shots use edits of this reference; never reconstruct identity from prose alone.
 
 ## Editing/adding/replacing characters
 
-`Fal::Models::GptImage25Edit` calls `openai/gpt-image-2.5/sunburst/edit` at xhigh. `02_keyframes.yml` can specify `base`, `refs` and `prompt`. State “same character and same approved visual style,” with one intentional change per edit. Specify composition by percent of frame, face bounds and empty areas for planned text. Keep reference image ordering explicit for multiple characters.
+`Fal::Models::GptImage26Edit` calls `openai/gpt-image-2.6/sunburst/edit` with `quality: "high"` and `reasoning_effort: "high"`. `02_keyframes.yml` can specify `base`, `refs` and `prompt`. State “same character and same approved visual style,” with one intentional change per edit. Specify composition by percent of frame, face bounds and empty areas for planned text. Keep reference image ordering explicit for multiple characters.
 
 For an approved swap, create `char-<id>-v2` or a versioned edited keyframe. Review it; update dependent runs/prompts; regenerate only affected keyframes/clips/overlays. Recompute sprite crop boxes and placement when hair, costume or silhouette changes. Preserve v1 and its accepted takes. A newly added cast member gets a separate identity run, linked into the same style bible.
 
@@ -54,4 +54,4 @@ Fal describes `target_audio_url` as soundtrack pinning. It is not a contractual 
 
 Fetch `openapi:fetch` and read `openapi:summary`. The wrappers validate known properties/enums/ranges when schemas exist; inspect nested/union constraints when extending a call. Add any other Fal audio/image/video model as a Ruby `Fal::Models::Base` subclass, then a service/task. Do not call an SDK or curl directly. Do not silently substitute a model or quality setting.
 
-Official sources: [H3 API](https://fal.ai/models/minimax/h3-max/image-to-video/api), [Sunburst generation](https://fal.ai/models/openai/gpt-image-2.5/sunburst/text-to-image/api), [Sunburst edit](https://fal.ai/models/openai/gpt-image-2.5/sunburst/edit/api). Defaults were checked when this skill was built; refresh schemas for a new production.
+Official sources: [H3 API](https://fal.ai/models/minimax/h3-max/image-to-video/api), [Sunburst generation](https://fal.ai/models/openai/gpt-image-2.6/sunburst/text-to-image/api), [Sunburst edit](https://fal.ai/models/openai/gpt-image-2.6/sunburst/edit/api). Defaults were checked when this skill was built; refresh schemas for a new production.

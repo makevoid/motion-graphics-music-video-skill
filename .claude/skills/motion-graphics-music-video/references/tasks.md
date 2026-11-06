@@ -64,7 +64,7 @@ Invoke each import (and each differently parameterized call to the same Rake tas
 
 ```ruby
 {
-  "char-singer-v1" => { steps: [Steps::RefBase], image_model: Fal::Models::GptImage25 },
+  "char-singer-v1" => { steps: [Steps::RefBase], image_model: Fal::Models::GptImage26 },
   "s01" => {
     steps: [Steps::RefBase, Steps::Music, Steps::Keyframes, Steps::Clips, Steps::Overlay],
     import: { ref_base: "char-singer-v1" },

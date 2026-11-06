@@ -11,11 +11,11 @@ RSpec.describe "Paid Fal and local finishing", :live do
       FileUtils.mkdir_p("docs"); FileUtils.mkdir_p("config")
       File.write("docs/PLAN.md", "Paid test: one image, one edit, one H3 5s, one Whisper, one Demucs and one SFX. No rerolls.")
       Workflow::Approval.new.record!("LIVE_FAL=1 supplied by test operator")
-      image_model = Fal::Models::GptImage25.new(client: client)
+      image_model = Fal::Models::GptImage26.new(client: client)
       generated = image_model.generate(prompt: "Hyper quality polished playful 2D music video character: red cartoon robot singer, expressive face with clear mouth, full body centered, flat green #00B140 background. No text, no extra characters, no green clothing.")
       image = client.download(generated.output.fetch("images").first.fetch("url"), file("identity.png"))
       expect(magick.identify(image)[:w]).to be >= 1920
-      edited = Fal::Models::GptImage25Edit.new(client: client).edit(prompt: "The SAME robot character and style, same flat chroma green. Keep the face clearly visible, raise one hand in an expressive singing pose. Hyper quality polished detail, no text.", image_urls: [generated.output["images"][0]["url"]])
+      edited = Fal::Models::GptImage26Edit.new(client: client).edit(prompt: "The SAME robot character and style, same flat chroma green. Keep the face clearly visible, raise one hand in an expressive singing pose. Hyper quality polished detail, no text.", image_urls: [generated.output["images"][0]["url"]])
       client.download(edited.output["images"][0]["url"], file("pose.png"))
       input = ff.extract_audio(song, file("song.wav"), seconds: 5)
       input = ff.fit_audio(input, file("padded.wav"), seconds: 5, fade: 0) if ff.duration(input) < 5

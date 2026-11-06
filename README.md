@@ -6,7 +6,7 @@ A Claude Code plugin for creating high quality motion graphics videos from just 
 
 ---
 
-It includes Image generation and editing with GPT 2.5 Sunburts xhigh for generating characters and potentially other graphics, MiniMax H3 to animate the characters and the graphics in a with a greenscreen background and other tools that are helpful to isolate audio for lip-sync and SFX creation - all of these are done via FAL.ai API via video/audio adapters - For the animation Nodejs with P5JS is used, local Python is used for  analysis/cutouts/audio mixing and Swift Core has powerful and fast Image VFX (video effects).
+It includes image generation and editing with GPT Image 2.6 Sunburst at high rendering quality and high reasoning effort for characters and other graphics, MiniMax H3 to animate characters and graphics against a green-screen background, and tools to isolate audio for lip-sync and create SFX. These services use Fal.ai through video/audio adapters. Animation uses Node.js with p5.js; local Python handles analysis, cutouts and audio mixing; Swift Core Image provides fast video effects. See the [0.2.6 release notes](docs/releases/0.2.6.md) for the image-model upgrade.
 
 This is a very powerful toolkit that will generate videos like the ones below with a relatively low budget (~30$ of Fal AI credits and around 3M Tokens of Opus 5.5 for a ~3m long song / video).
 

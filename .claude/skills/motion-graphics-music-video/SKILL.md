@@ -52,7 +52,7 @@ After actual approval, record its words with `NOTE='...' ... plan:approve`. This
 
 ## 3. Generate with staged sub-agents
 
-Read [production.md](references/production.md), [prompts.md](references/prompts.md) and the relevant [animation/audio/VFX guide](references/animation-audio-vfx.md). Use GPT Image 2.5 Sunburst **xhigh** for character sheets, frames and image edits, and MiniMax H3 Max **1080P** for animation by default. Fetch current schemas with `openapi:fetch`; never silently downgrade an unavailable model. Keep the supplied song as the master soundtrack.
+Read [production.md](references/production.md), [prompts.md](references/prompts.md) and the relevant [animation/audio/VFX guide](references/animation-audio-vfx.md). Use GPT Image 2.6 Sunburst **high** quality and **high** reasoning effort for character sheets, frames and image edits, and MiniMax H3 Max **1080P** for animation by default. Fetch current schemas with `openapi:fetch`; never silently downgrade an unavailable model. Keep the supplied song as the master soundtrack.
 
 Populate `config/generations.rb` and `config/production.json`. Delegate production to sub-agents in waves: **2 assets first → 3–4 → 4–8 → 6–10 → 6–10 repeatedly until finished**. These are asset jobs, not video frame counts or an instruction to exceed the host's agent limit. Schedule the opening and main peak early. Use fewer jobs when dependencies or the remaining work require it. With fewer agent slots, process the wave in smaller groups and keep its review boundary. If delegation is unavailable, explain that limitation and perform the same waves serially.
 

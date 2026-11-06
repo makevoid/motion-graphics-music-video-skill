@@ -35,7 +35,7 @@ RSpec.describe "Character to animated scene pipeline", :media do
       approve
       Pipeline::Steps::RefBase.new(project:revised,client:client).run!
     end
-    expect(client.calls.first[0]).to eq(Fal::Models::GptImage25Edit.endpoint)
+    expect(client.calls.first[0]).to eq(Fal::Models::GptImage26Edit.endpoint)
     expect(client.calls.first[1][:image_urls]).to eq(["fixture://approved-v1"])
     expect(Digest::SHA256.file(image).hexdigest).to eq(before)
     expect(revised[:ref_base]["path"]).not_to eq(image)
@@ -67,8 +67,10 @@ RSpec.describe "Character to animated scene pipeline", :media do
       Pipeline::Steps::Keyframes.new(project: project, client: client).run!
       Pipeline::Steps::Clips.new(project: project, client: client).run!
     end
-    expect(client.calls[0][1][:quality]).to eq("xhigh")
-    expect(client.calls[1][0]).to eq(Fal::Models::GptImage25Edit.endpoint)
+    expect(client.calls[0][0]).to eq("openai/gpt-image-2.6/sunburst/text-to-image")
+    expect(client.calls[0][1]).to include(quality: "high", reasoning_effort: "high")
+    expect(client.calls[1][1]).to include(quality: "high", reasoning_effort: "high")
+    expect(client.calls[1][0]).to eq(Fal::Models::GptImage26Edit.endpoint)
     h3 = client.calls.last
     expect(h3[1]).to include(resolution: "1080P", duration: 5)
     expect(h3[1][:target_audio_url]).to start_with("fixture://04_audio_")
