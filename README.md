@@ -18,7 +18,7 @@ The MP4 HD video file will be generated in the `ouput` directory at the end of t
 
 ## Videos created with this skill
 
-Seven examples made with this skill. Click a thumbnail to watch on YouTube.
+Eight examples made with this skill. Click a thumbnail to watch on YouTube.
 
 | The Math of You | You knew how to fork — take 2 | You knew how to fork |
 | :---: | :---: | :---: |
@@ -29,9 +29,9 @@ Seven examples made with this skill. Click a thumbnail to watch on YouTube.
 | <a href="https://www.youtube.com/watch?v=MUf_h7GPnEI"><img src="https://github.com/user-attachments/assets/9d92a515-8e5d-4ff7-bcf2-30927976fe52" width="240" height="135" alt="Upping my P(doom) — Video Remix #2 — Opus 5.5 (et al.)"></a> | <a href="https://youtu.be/UGX2KzetGZ0"><img src="https://github.com/user-attachments/assets/fd931c6e-a83a-4dd3-9179-9e92e81de619" width="240" height="135" alt="Symphony — Elrosea — Opus 5.5 Music Video Motion Graphics Claude Plugin — SunoAI"></a> | <a href="https://youtu.be/Zqd77QCaa58"><img src="https://github.com/user-attachments/assets/a2e48605-910d-46d6-84a2-546730ec60a3" width="240" height="135" alt="Opus 5.5 Animated Video - Parterre Girl by Core Refusal - Suno"></a> |
 | Remix of donaldjewkes's video remix · 2:22 | Elrosea · Opus 5.5 · SunoAI | Core Refusal · Opus 5.5 · Suno |
 | <br> | <br>  | <br>  |
-| **Programming is DEAD** |  |  |
-| <a href="https://youtu.be/MLxQCXH5-5o"><img src="https://i.ytimg.com/vi/MLxQCXH5-5o/mqdefault.jpg" width="240" height="135" alt="Programming Is Dead (AI Music Video made by Claude Opus)"></a> |  |  |
-| @makevoid · 1:56 |  |  |
+| **Programming is DEAD** | **Upping My P(doom) — live action** |  |
+| <a href="https://youtu.be/MLxQCXH5-5o"><img src="https://i.ytimg.com/vi/MLxQCXH5-5o/mqdefault.jpg" width="240" height="135" alt="Programming Is Dead (AI Music Video made by Claude Opus)"></a> | <a href="https://www.youtube.com/watch?v=_hNMWm_hvuk"><img src="https://i.ytimg.com/vi/_hNMWm_hvuk/mqdefault.jpg" width="240" height="135" alt="Upping My P(doom) — Live Action AI Music Video"></a> |  |
+| @makevoid · 1:56 | Void MVs · Live Action AI Music Video |  |
 
 The repository ships readable source files, including a small SVG icon, with no bundled binary media or fonts. The [icon recreation prompt](docs/icon-generation.md) and [production prompts](.claude/skills/motion-graphics-music-video/references/prompts.md) describe how to create assets in a separate video project. Plugin installation and MCP startup do not download assets or dependencies; project `setup` installs the production dependencies when explicitly run.
 
